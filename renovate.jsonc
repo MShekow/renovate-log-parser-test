@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":disableRateLimiting",
+  ],
+  "labels": ["dependencies"],
+  "vulnerabilityAlerts": {
+    "labels": ["security", "dependencies"],
+  },
+  "platformAutomerge": false,
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Match 'somekey: someversion' in GitHub workflow files, assuming a preceding line has this form: # renovate: datasource=... depName=... versioning=",
+      "fileMatch": ["^\\.github\\/workflows\\/.*\\.ya?ml$"],
+      "matchStrings": [
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s *.*: \"?(?<currentValue>[a-zA-Z0-9.]*)\"?\\s"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "node_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "orderby-time": "0.1.0"
+  }
+}
