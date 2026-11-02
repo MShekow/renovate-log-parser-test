@@ -8,5 +8,5 @@ edition = "2021"
 [dependencies]
 #time = "0.1.12"
 regex = "0.1.41"
-rocket = "0.5.0-rc.2"
+iron = "0.6.1"
 rand = "0.8.5"
